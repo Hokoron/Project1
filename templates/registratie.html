@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/static/style_login.css" type="text/css">
+{% block body %}
+{% if session['register'] %}
+<p>register</p>
+{% else %}
+<form action="/registratie" method="POST">
+    <div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Registratie</h1>
+			</div>
+
+			<div class="login-form">
+				<div class="control-group">
+				<input type="text" class="login-field"  name="username" placeholder="Login" >
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+
+				<div class="control-group">
+				<input type="password" class="login-field"  name="password" placeholder="Wachtwoord" >
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+
+                <div class="control-group">
+				<input type="weelradius" class="login-field"  name="weelradius" placeholder="straal wiel">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+
+                <input type="submit" value="Registreren" class="btn btn-primary btn-large btn-block" >
+			    <br>
+			</div>
+		</div>
+	</div>
+</form>
+{% endif %}
+{% endblock %}

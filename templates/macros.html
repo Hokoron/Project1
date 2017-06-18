@@ -1,0 +1,7 @@
+{% macro print_td_link(waarde,url) %}
+    <td><a href="{{ url_for(url,naam=waarde) }}">{{ waarde }}</a></td>
+{% endmacro %}
+
+{% macro print_td(waarde) %}
+    <td>{{waarde}}</td>
+{% endmacro %}

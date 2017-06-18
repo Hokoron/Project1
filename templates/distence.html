@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    distance
+{% endblock %}
+
+{% block home %}
+    class="active"
+{% endblock %}
+
+{% block body %}
+    <h1>Afgelegde afstand</h1>
+	  <div class="container" align="left">
+			<embed type="image/svg+xml" src={{graph_data|safe}} style='max-width:800px'/>
+	  </div>
+{% endblock %}

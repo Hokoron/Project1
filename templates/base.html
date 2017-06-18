@@ -1,0 +1,42 @@
+{#{% import "macros/macro.html" as macro %}#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        HerhalingsOef - {% block title %}{% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{{ url_for("static",filename="css/style.css") }}">
+</head>
+<body>
+    <header>
+       <a href="/" id="logo"></a>
+        <nav>
+            <ul>
+                <li><a {% block home %}{% endblock %} href="{{ url_for("home") }}">Home</a></li>
+                <li><a {% block distence %}{% endblock %} href="{{ url_for("distance") }}">Distance</a></li>
+                <li><a {% block time %}{% endblock %} href="{{ url_for("time") }}">Time</a></li>
+                <li><a {% block acount %}{% endblock %} href="{{ url_for("acount") }}">Account</a></li>
+                <li><a {% block logout %}{% endblock %} href="{{ url_for("logout") }}">Uitloggen</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        {% block body %}{% endblock %}
+    </section>
+    <footer class="footer-distributed">
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a {% block home2 %}{% endblock %} href="{{ url_for("home") }}">Home</a>
+                    <a {% block distence2 %}{% endblock %} href="{{ url_for("distance") }}">Distance</a>
+                    <a {% block time2 %}{% endblock %} href="{{ url_for("time") }}">Time</a>
+                    <a {% block acount2 %}{% endblock %} href="{{ url_for("acount") }}">Acount</a>
+				</p>
+
+				<p>Torfs Joryan &copy; 2016</p>
+			</div>
+
+	</footer>
+</body>

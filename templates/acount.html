@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}
+    acount
+{% endblock %}
+
+{% block home %}
+    class="active"
+{% endblock %}
+
+{% block body %}
+    <h1>Passwoord aanpassen</h1>
+    <form action="/changepassword" method="POST">
+		<input type="text" class="login-field" value="" placeholder="Username" name="username">
+
+		<input type="password" class="login-field" value="" placeholder="Passwoord" name="password">
+
+        <input type="password" class="login-field" value="" placeholder="Nieuw passwoord" name="re_password">
+
+        <input type="submit" value="paswoord aanpassen" class="btn btn-primary btn-large btn-block" >
+    </form>
+    <h1>Usernaam aanpassen</h1>
+    <form action="/changeusername" method="POST">
+		<input type="text" class="login-field" value="" placeholder="Username" name="username">
+
+		<input type="password" class="login-field" value="" placeholder="Nieuwe usernaam" name="new_username">
+
+        <input type="password" class="login-field" value="" placeholder="passwoord" name="password">
+
+        <input type="submit" value="username aanpassen" class="btn btn-primary btn-large btn-block" >
+    </form>
+    <h1>Wielgrote aanpassen</h1>
+    <form action="/changeweelsize" method="POST">
+		<input type="text" class="login-field" value="" placeholder="Username" name="username">
+
+		<input type="password" class="login-field" value="" placeholder="Nieuwe wiel grote" name="new_weel">
+
+        <input type="password" class="login-field" value="" placeholder="Passwoord" name="password">
+
+        <input type="submit" value="username aanpassen" class="btn btn-primary btn-large btn-block" >
+    </form>
+
+
+{% endblock %}
