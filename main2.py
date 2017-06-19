@@ -102,7 +102,7 @@ while True:
             prined_speed = 0
         prined_speed = round(prined_speed,1)
         Lcd.function_print(lcdtest, str(prined_speed))
-        Lcd.function_print(lcdtest, " Km")
+        Lcd.function_print(lcdtest, " Km/h")
         previous_time2 = time_now2
         speed = []
 
