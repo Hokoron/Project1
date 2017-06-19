@@ -101,3 +101,11 @@ class dbClass:
         sqlCommand = sqlQuery.format(param1=date, param2=afstand, param3=geredentijd, param4=gepauzeerdetijd, param5=gemideldesnelheid)
         self.__cursor.execute(sqlCommand)
         self.__connection.commit()
+
+    def getweel(self, parameter):
+        query = "SELECT weelradius FROM registreren WHERE id = '{param1}'"
+        sqlCommand = query.format(param1 = parameter)
+        self.__cursor.execute(sqlCommand)
+        result = self.__cursor.fetchall()
+        self.__cursor.close()
+        return result

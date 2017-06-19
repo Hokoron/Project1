@@ -29,6 +29,7 @@ getdatum = dbClass()
 getinfo = dbClass()
 newday = dbClass()
 update = dbClass()
+newweel = dbClass()
 
 #setup lcd--------------------------------------------------------------------
 lcdtest = Lcd(21, 20, 16, 25, 24, 23, 18)
@@ -40,7 +41,8 @@ GPIO.add_event_detect(hallsensor, GPIO.BOTH)
 #variables--------------------------------------------------------------------
 previous_time = time_to_seconds(datetime.datetime.now())
 previous_time2 = time_to_seconds(datetime.datetime.now())
-radius = 36
+radiuslist =  newweel.getweel(1)[0]
+radius = int(radiuslist[0])
 lengt_weel = radius *2 * math.pi
 lengt_half_weel = lengt_weel/2
 isuploaded = True
